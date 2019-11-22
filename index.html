@@ -29,13 +29,14 @@
         }
 
         shuffleBackward = () => {
-          console.log('shuffleBackward!');
-
+          const { cardData } = this.state;
+          const newCardData = [];  
         }
 
         shuffleForward = () => {
-          console.log('shuffleForward!');
-
+          const { cardData } = this.state;
+          const newCardData = [...cardData.slice(1), cardData[0]];
+          this.setState({ cardData: newCardData });
         }
 
         render() {
@@ -45,7 +46,7 @@
                 Flashback
               </h1>
               <p className='sub-title'>
-                An interactive flashcard app.
+                An interactive flash cards app.
               </p>
               <div className="card-list">
                 {this.state.cardData.map((card, index) => <Card key={index} front={card.front} />)}
