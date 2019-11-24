@@ -29,14 +29,18 @@
         }
 
         shuffleBackward = () => {
-          console.log('shuffleBackward!');
+          const { cardData } = this.state;
+          const newcardData = [ cardData[6], ...cardData.slice(0,6)];
+          this.setState ({cardData: newcardData });
 
         }
 
         shuffleForward = () => {
-          console.log('shuffleForward!');
-
+          const { cardData } = this.state;
+          const newcardData = [...cardData.slice(1), cardData[0]];
+          this.setState({ cardData: newcardData });
         }
+
 
         render() {
           return(
