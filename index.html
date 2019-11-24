@@ -68,6 +68,13 @@
       }
 
       class Card extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            flipped: false
+          };
+        }
+        
         render () {
           return(
             <div className='Card -front'>
