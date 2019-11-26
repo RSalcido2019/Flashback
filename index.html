@@ -28,9 +28,10 @@
           this.setState({ cardData: cardData });
         }
 
-        shuffleBackward = () => {
+        shuffleBackward= () => {
           const { cardData } = this.state;
-          const newCardData = [];  
+          const newCardData = [cardData[6], ...cardData.slice(0,6)];
+          this.setState({ cardData: newCardData });
         }
 
         shuffleForward = () => {
