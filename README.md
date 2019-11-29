@@ -3,4 +3,5 @@ I built a ReactJS application that covers the fundamentals by using an interacti
 
 
 
-<img src='FlashBack.gif' style="display:none">
+
+<gif-player src='FlashBack.gif' speed="1" play></gif-player>
